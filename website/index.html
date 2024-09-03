@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+  <title>Jose Ramirez</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container my-3 my-md-5">
+  <div class="row">
+  <br><br>
+   <header class="col-12 col-md-4 col-lg-4">
+     <aside class="sidebar text-center px-2 px-md-3 px-lg-5 py-4 py-md-5">
+   <div class="sticky-wrap">
+   <div id="user-info" class="user-info">
+     <div class="about">
+       <a href="img/jose.jpg" alt="Jose Ramirez">
+       <img src="img/jr.jpg" alt="Jose Ramirez" class="profile-pic img-fluid rounded-circle" title style>
+       </a>
+  <h1 class='name mt-3 mb-1'>Jose Ramirez</h1>
+       <p class="job-name mb-0"> Senior Software Engineer/ Marathon Runner</p>
+     </div>
+     <div id="contact-info" class="contact-info mt-5">
+     <div class="social-icons">
+      <ul class="list-unstyled mb-0">
+        <li>
+          <a href="https://github.com/jramirez857">
+            <img src="img/github.svg" alt="GitHub" height="24" width="24" class="contact-icon">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jose-ramirez-4ae/">
+            <img src="img/linkedin.svg" alt="linkedin" height="24" width="24" class="contact-icon">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.josetheengineer.dev">
+            <img src="img/hashnode.svg" alt="hashnode" height="24" width="24" class="contact-icon">
+          </a>
+        </li>
+      </ul>
+      </div>
+     </div>
+      <div id="visitor-count" class="visitor-count mt-5">
+       <script>
+          console.log("Fetching visitor count");
+          const update = {};
+
+
+          const options = {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Access-Control-Request-Method': 'POST',
+                  'Access-Control-Request-Headers': 'Content-Type, Accept',
+                  'Origin': 'https://joseramirez.cloud'
+              },
+              body: JSON.stringify(update),
+          };
+
+          document.getElementById('visitor-count').innerHTML = "<p>Visitor Count: Loading...</p>";
+
+          fetch('https://wc00af6zfh.execute-api.us-east-1.amazonaws.com/default/visitor-count-api-lambda', options).then(data => {
+              if (!data.ok) {
+                  throw new Error(data.status);
+              }
+              return data.json();
+          }).then(update => {
+              document.getElementById('visitor-count').innerHTML = "<p>Visitor Count: " + update + "</p>";
+          }).catch(e => {
+              console.log(e);
+          });
+       </script>
+       </div>
+     </div>
+       </div>
+     </aside>
+    </header>
+  <hr class="break"/>
+  <br>
+  <main class="col-12 col-md-8 col-lg-8">
+  <section id="about" class="section mt-3 mt-md-0 p-3">
+    <h3 class="mb-3 text-uppercase">
+      About</h3>
+    <p>Developer, marathon runner, community organizer. I love building things and sharing what I learn with others.</p>
+    <p>
+      This is a condensed resume for <a href="https://cloudresumechallenge.dev">The Cloud Resume Challenge</a>. If you are interested in viewing my full resume, please visit my <a href="https://www.linkedin.com/in/jose-ramirez-4ae/">LinkedIn</a> page.
+    </p>
+    <p>
+      Also check out my <a href="https://josetheengineer.dev">blog</a> for posts about projects I have built in the past and certifications I have obtained.
+    </p>
+  </section>
+  <section id="experience" class="section mt-3 mt-md-5 p-3">
+  <h3 class="mb-3 text-uppercase">Experience</h3>
+    <div class="row mt-4 mb-2">
+      <div class="col-6"><span class="tiny-super font-weight-bold">Capital One</span>
+        <span class="tiny-super d-block title">Principal Associate Software Engineer - Cyber</span>
+    </div>
+      <div class="col-6 text-right">
+        <span class="tiny-super date">Feb 2023 - April 2024</span>
+      </div>
+    </div>
+    <div class="row mt-4 mb-2">
+      <div class="col-6"><span class="tiny-super font-weight-bold">Motorola Solutions</span>
+        <span class="tiny-super d-block title">Software Engineer II</span>
+    </div>
+      <div class="col-6 text-right">
+        <span class="tiny-super date">July 2017 - October 2022</span>
+      </div>
+    </div>
+        <div class="row mt-4 mb-2">
+     <div class="col-6"><span class="tiny-super font-weight-bold">Avigilon</span>
+        <span class="tiny-super d-block title">Test Engineer Co-op</span>
+    </div>
+      <div class="col-6 text-right">
+        <span class="tiny-super date">January 2016 - July 2016</span>
+      </div>
+    </div>
+    <div class="row mt-4 mb-2">
+     <div class="col-6"><span class="tiny-super font-weight-bold">Quikforce</span>
+        <span class="tiny-super d-block title">Engineering Lead</span>
+    </div>
+      <div class="col-6 text-right">
+        <span class="tiny-super date">January 2015 - July 2015</span>
+      </div>
+    </div>
+  </section>
+  <section id="education" class="section mt-3 mt-md-5 p-3">
+    <h3 class="mb-2 text-uppercase">Education</h3>
+    <div class="row mt-4 mb-2">
+      <div class="col-6">
+        <span class="tiny-super d-block font-weight-bold">Northeastern University</span>
+        <span class="tiny-super">BS: Computer Engineering</span>
+      </div>
+      <div class="col-6 text-right">
+        <span class="tiny-super">2017</span>
+      </div>
+    </div>
+  </section>
+  <section id="certifications" class="section mt-3 mt-md-5 p-3">
+    <h3 class="mb-3 text-uppercase">Certifications</h3>
+    <div>
+      <strong> AWS Certified Developer - Associate</strong>
+      <p>
+        <img src="img/aws_developer_associate.png" class="aws-badge" alt="AWS Certified Developer Associate Icon">
+        <br>
+        Issued Aug, 2023
+        <br>
+        <a href="https://www.credly.com/badges/58fc7c62-1f8f-435b-918a-e73463322df1/public_url">view credential</a>
+      </p>
+    </div>
+    <br>
+    <br>
+    <div>
+      <strong> AWS Certified Solutions Architect - Associate</strong>
+      <p>
+        <img src="img/aws_solutions_architect_associate.png" class="aws-badge" alt="AWS Certified Solutions Architect Associate Icon">
+        <br>
+        Issued Dec, 2022
+        <br>
+        <a href="https://www.credly.com/badges/6d75fb1a-9c45-46ee-84cd-1a849ad3f635/public_url">view credential</a>
+      </p>
+    </div>
+    <br>
+    <br>
+     <div>
+      <strong> AWS Certified Cloud Practitioner</strong>
+      <p>
+        <img src="img/aws_cloud_practitioner.png" class="aws-badge" alt="AWS Certified Cloud Practitioner Icon">
+        <br>
+        Issued Nov, 2022
+        <br>
+        <a href="https://www.credly.com/badges/200573a3-3a4b-41b3-a115-d9c8539fd828/public_url">view credential</a>
+      </p>
+    </div>
+  </section>
+    <section id="hobbies" class="section mt-3 mt-md-5 p-3">
+    <h3 class="mb-3 text-uppercase">Hobbies</h3>
+      <ul>
+    <li>Running</li>
+    <li>Photography</li>
+    <li>Boxing</li>
+    <li>Programming</li>
+    <li>Computer Science</li>
+    <li>Dancing</li>
+    <li>Reading</li>
+  </ul>
+      </main>
+  </section>
+  </div>
+  </div>
+  </body>
+</html>
